@@ -73986,7 +73986,7 @@ Height,360
 SWITCH_MATRIX
 Name,FLUT51PSDM_switch_matrix
 Src,/home/hausding/Documents/FABulous/demo_CrocoScale_OWAS/CrocoScale_Fabric/Tile/FLUT51PSDM/FLUT51PSDM_switch_matrix.v
-Csv,/home/hausding/Documents/FABulous/demo_CrocoScale_OWAS/CrocoScale_Fabric/Tile/FLUT51PSDM/tiles/b64x16_a48x16/FLUT51PSDM_switch_matrix.list
+Csv,/home/hausding/Documents/FABulous/demo_CrocoScale_OWAS/CrocoScale_Fabric/Tile/FLUT51PSDM/tiles/b64mix_a48x16/FLUT51PSDM_switch_matrix.list
 RelX,121
 RelY,8
 Width,152

@@ -16,9 +16,9 @@ git submodule update --init --recursive
 The submodule uses SSH and requires GitHub SSH access.
 
 `fabric.csv` references `Tile/FLUT51PSDM/FLUT51PSDM.csv`. That root tile definition
-selects the `b64x16_a48x16` matrix.
+selects the `b64mix_a48x16` matrix (the bank32 candidate).
 
-The FLUT tile has 1,112 configuration bits. `FrameStrobeEncoding,q_of_n,2,9`
+The FLUT tile has 1,080 configuration bits. `FrameStrobeEncoding,q_of_n,2,9`
 provides 47 logical frames using 20 physical frame-strobe wires. Regenerate the
 fabric and bitstream specification together when changing the tile library or
 encoding; old LUT4AB bitstreams and routing models must not be reused.

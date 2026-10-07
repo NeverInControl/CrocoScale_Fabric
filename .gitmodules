@@ -1,0 +1,3 @@
+[submodule "Tile/FLUT51PSDM"]
+	path = Tile/FLUT51PSDM
+	url = git@github.com:hausdinge/FABulous-FLUT51PSDM-LIB.git

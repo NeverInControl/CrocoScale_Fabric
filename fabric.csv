@@ -30,6 +30,7 @@ MultiplexerStyle,custom,#,custom,generic,,,,,,,,,,,,,,
 SuperTileEnable,TRUE,#,TRUE,FALSE,,,,,,,,,,,,,,
 UserCLKDirection,W2E
 FrameStrobeEncoding,q_of_n,2,9
+IncludeBorderRows,TRUE,# config bits in the top/bottom IO rows; limits the fabric to 30 rows
 ,,,,,,,,,,,,,,,,,,
 Tile,./Tile/FLUT51PSDM/FLUT51PSDM.csv,,,,,,,,,,,,,,,,,
 Tile,./Tile/SOC_DEBUG_IO/SOC_DEBUG_IO.csv,,,,,,,,,,,,,,,,,

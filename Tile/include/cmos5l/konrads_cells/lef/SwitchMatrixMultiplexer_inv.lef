@@ -1,0 +1,111 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO SwitchMatrixMultiplexer_inv
+  CLASS CORE ;
+  FOREIGN SwitchMatrixMultiplexer_inv ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 5.280 BY 3.780 ;
+  SITE CoreSite ;
+  SYMMETRY X Y ;
+  PIN D
+    DIRECTION INPUT ;
+    ANTENNAGATEAREA 0.180700 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.130 2.745 1.430 3.380 ;
+    END
+  END D
+  PIN A
+    DIRECTION INPUT ;
+    ANTENNAGATEAREA 0.178100 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 3.030 2.860 3.290 3.340 ;
+    END
+  END A
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.560 5.280 4.000 ;
+    END
+  END VDD
+  PIN B
+    DIRECTION INPUT ;
+    ANTENNAGATEAREA 0.178100 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 3.710 1.120 4.180 2.170 ;
+    END
+  END B
+  PIN X
+    DIRECTION OUTPUT ;
+    ANTENNADIFFAREA 0.520600 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 3.460 0.440 4.560 0.940 ;
+    END
+  END X
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 -0.220 5.280 0.220 ;
+    END
+  END VSS
+  PIN SEL
+    DIRECTION INPUT ;
+    ANTENNAGATEAREA 0.361400 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.280 0.400 0.560 0.920 ;
+    END
+  END SEL
+  OBS
+      LAYER Metal1 ;
+        RECT 0.230 2.440 0.490 3.005 ;
+        RECT 0.790 2.620 0.950 3.560 ;
+        RECT 1.430 3.060 1.985 3.380 ;
+        RECT 2.690 2.960 2.850 3.560 ;
+        RECT 4.000 3.340 4.260 3.380 ;
+        RECT 3.290 3.180 4.260 3.340 ;
+        RECT 4.440 3.000 4.740 3.380 ;
+        RECT 1.610 2.620 2.330 2.880 ;
+        RECT 2.520 2.700 2.850 2.960 ;
+        RECT 3.470 2.840 4.740 3.000 ;
+        RECT 3.470 2.680 3.630 2.840 ;
+        RECT 2.170 2.440 2.330 2.620 ;
+        RECT 3.030 2.520 3.630 2.680 ;
+        RECT 4.920 2.660 5.080 3.560 ;
+        RECT 0.230 2.280 1.990 2.440 ;
+        RECT 2.170 2.280 2.810 2.440 ;
+        RECT 0.230 1.580 1.090 2.280 ;
+        RECT 1.830 2.100 1.990 2.280 ;
+        RECT 1.270 1.940 1.650 2.100 ;
+        RECT 1.830 1.940 2.470 2.100 ;
+        RECT 0.230 1.100 0.490 1.580 ;
+        RECT 0.740 0.220 1.000 1.150 ;
+        RECT 1.270 0.760 1.430 1.940 ;
+        RECT 1.610 1.660 1.770 1.760 ;
+        RECT 2.650 1.660 2.810 2.280 ;
+        RECT 3.030 2.080 3.280 2.520 ;
+        RECT 3.810 2.500 4.560 2.660 ;
+        RECT 1.610 1.500 2.890 1.660 ;
+        RECT 1.610 0.940 1.770 1.500 ;
+        RECT 3.070 1.320 3.280 2.080 ;
+        RECT 2.130 1.160 3.280 1.320 ;
+        RECT 2.130 0.760 2.290 1.160 ;
+        RECT 1.270 0.600 2.290 0.760 ;
+        RECT 2.470 0.220 2.730 0.980 ;
+        RECT 2.910 0.500 3.280 1.160 ;
+        RECT 4.400 0.940 4.560 2.500 ;
+        RECT 4.740 2.400 5.080 2.660 ;
+        RECT 4.740 0.220 4.900 0.915 ;
+  END
+END SwitchMatrixMultiplexer_inv
+END LIBRARY
+

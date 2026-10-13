@@ -1,0 +1,66 @@
+VERSION 5.7 ;
+  NOWIREEXTENSIONATPIN ON ;
+  DIVIDERCHAR "/" ;
+  BUSBITCHARS "[]" ;
+MACRO tri_buff
+  CLASS CORE ;
+  FOREIGN tri_buff ;
+  ORIGIN 0.000 0.000 ;
+  SIZE 1.920 BY 3.780 ;
+  SITE CoreSite ;
+  SYMMETRY X Y ;
+  PIN VSS
+    DIRECTION INOUT ;
+    USE GROUND ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 -0.220 1.920 0.220 ;
+    END
+  END VSS
+  PIN S
+    DIRECTION INPUT ;
+    ANTENNAGATEAREA 0.377000 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.190 1.400 0.660 1.760 ;
+    END
+  END S
+  PIN A
+    DIRECTION INPUT ;
+    ANTENNAGATEAREA 0.269100 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.520 1.110 1.800 2.030 ;
+    END
+  END A
+  PIN X
+    DIRECTION OUTPUT ;
+    ANTENNADIFFAREA 0.703800 ;
+    PORT
+      LAYER Metal1 ;
+        RECT 1.180 2.210 1.680 3.150 ;
+    END
+  END X
+  PIN VDD
+    DIRECTION INOUT ;
+    USE POWER ;
+    PORT
+      LAYER Metal1 ;
+        RECT 0.000 3.560 1.920 4.000 ;
+    END
+  END VDD
+  OBS
+      LAYER Metal1 ;
+        RECT 0.190 2.120 0.470 3.150 ;
+        RECT 0.650 2.300 0.910 3.560 ;
+        RECT 0.190 1.940 1.000 2.120 ;
+        RECT 0.840 1.220 1.000 1.940 ;
+        RECT 0.190 1.060 1.000 1.220 ;
+        RECT 0.190 0.670 0.350 1.060 ;
+        RECT 1.180 0.930 1.340 2.210 ;
+        RECT 0.650 0.220 0.910 0.880 ;
+        RECT 1.180 0.670 1.680 0.930 ;
+  END
+END tri_buff
+END LIBRARY
+

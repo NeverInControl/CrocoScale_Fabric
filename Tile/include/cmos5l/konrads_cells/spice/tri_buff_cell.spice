@@ -1,0 +1,57 @@
+* NGSPICE file created from tri_buff_cell_rcx.ext - technology: ihp-sg13g2
+
+.subckt tri_buff_cell_rcx VSS S A X VDD
+X0 X.t0 A.t0 a_220_96# VSS.t3 sg13_lv_nmos ad=0.2822p pd=2.34u as=74.7f ps=1.01u w=0.83u l=0.13u
+X1 a_220_96# S.t0 VSS.t1 VSS.t0 sg13_lv_nmos ad=74.7f pd=1.01u as=0.1577p ps=1.21u w=0.83u l=0.13u
+X2 a_220_412# a_24_96# VDD.t1 VDD.t0 sg13_lv_pmos ad=0.1116p pd=1.42u as=0.2356p ps=1.62u w=1.24u l=0.13u
+X3 X.t1 A.t0 a_220_412# VDD.t0 sg13_lv_pmos ad=0.4216p pd=3.16u as=0.1116p ps=1.42u w=1.24u l=0.13u
+X4 VDD.t1 S.t0 a_24_96# VDD.t0 sg13_lv_pmos ad=0.2356p pd=1.62u as=0.4216p ps=3.16u w=1.24u l=0.13u
+X5 VSS.t1 S.t0 a_24_96# VSS.t2 sg13_lv_nmos ad=0.1577p pd=1.21u as=0.2822p ps=2.34u w=0.83u l=0.13u
+R0 X X.t0 18.0243
+R1 X X.t1 5.73859
+R2 A A.t0 15.1851
+R3 S S.t0 15.0769
+R4 VDD.n0 VDD.t0 8.50843
+R5 VDD.n0 VDD.t1 5.99815
+R6 VDD VDD.n0 0.15803
+R7 VSS.n1 VSS.t0 474.414
+R8 VSS.t0 VSS.n0 249.952
+R9 VSS.n1 VSS.t2 170.718
+R10 VSS.n0 VSS.t3 148.355
+R11 VSS.n3 VSS.t1 17.2842
+R12 VSS.n2 VSS.n0 11.7124
+R13 VSS.n2 VSS.n1 10.0222
+R14 VSS.n3 VSS.n2 4.25824
+R15 VSS VSS.n3 0.158409
+C0 A S 0.03113f
+C1 S VDD 0.06904f
+C2 X a_24_96# 0.25827f
+C3 a_220_96# X 0.00603f
+C4 X A 0.32184f
+C5 X a_220_412# 0.00971f
+C6 a_220_96# a_24_96# 0
+C7 A a_24_96# 0.0408f
+C8 a_220_412# a_24_96# 0
+C9 X VDD 0.1715f
+C10 a_24_96# VDD 0.36592f
+C11 X S 0.00625f
+C12 a_220_96# VDD 0
+C13 A VDD 0.0678f
+C14 a_220_412# VDD 0.00506f
+C15 S a_24_96# 0.38461f
+C16 X VSS 0.52812f
+C17 A VSS 0.31635f
+C18 S VSS 0.29469f
+C19 VDD VSS 0.1183f
+C20 a_220_96# VSS 0.00347f
+C21 a_220_412# VSS 0
+C22 a_24_96# VSS 0.21217f
+C23 VDD.t1 VSS 0.04131f
+C24 VDD.t0 VSS 0.51681f
+C25 VDD.n0 VSS 0.10819f
+C26 S.t0 VSS 0.37276f
+C27 A.t0 VSS 0.29041f
+C28 X.t0 VSS 0.1508f
+C29 X.t1 VSS 0.21908f
+.ends
+

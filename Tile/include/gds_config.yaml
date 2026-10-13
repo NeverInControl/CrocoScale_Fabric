@@ -60,3 +60,85 @@ pdk::gf180mcuD:
   PDN_VPITCH: 100
 
   SYNTH_LATCH_MAP: "dir::../../../include/gf180mcuD_latchmap.v"
+
+# Shared CMOS5L synthesis, small-latch views, placement and routing settings.
+pdk::ihp-sg13cmos5l:
+  DIODE_ON_PORTS: out
+  RUN_LINTER: false
+  DPL_CELL_PADDING: 0
+  FABULOUS_DRT_TIMEOUT: 16000
+  GPL_CELL_PADDING: 0
+  SYNTH_STRATEGY: AREA 2
+  PL_TARGET_DENSITY_PCT: 97
+  PL_ROUTABILITY_DRIVEN: true
+  FABULOUS_SYNTH_SCRIPT: dir::../../../include/cmos5l/synthesis.py
+  OPENROAD_THREADS: 12
+  GRT_ANTENNA_REPAIR_MARGIN: 10
+  CELL_LIBS:
+    nom_typ_1p20V_25C:
+    - pdk_dir::libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_typ_1p20V_25C.lib
+    - pdk_dir::libs.ref/sg13cmos5l_io/lib/sg13cmos5l_io_typ_1p2V_3p3V_25C.lib
+    - dir::../../../include/cmos5l/konrads_cells/lib/kip_smallcells_tt_1p20V_25C-doiacuxuzprmzndo7odyhfnjje.lib
+    nom_fast_1p32V_m40C:
+    - pdk_dir::libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_fast_1p32V_m40C.lib
+    - pdk_dir::libs.ref/sg13cmos5l_io/lib/sg13cmos5l_io_fast_1p32V_3p6V_m40C.lib
+    - dir::../../../include/cmos5l/konrads_cells/lib/kip_smallcells_ff_1p32V_m40C-qfdaiz9qxigwpf5ifmgypthmmw.lib
+    nom_slow_1p08V_125C:
+    - pdk_dir::libs.ref/sg13cmos5l_stdcell/lib/sg13cmos5l_stdcell_slow_1p08V_125C.lib
+    - pdk_dir::libs.ref/sg13cmos5l_io/lib/sg13cmos5l_io_slow_1p08V_3p0V_125C.lib
+    - dir::../../../include/cmos5l/konrads_cells/lib/kip_smallcells_ss_1p08V_125C-be98ciu9njdkxnjxp13rwwsrwc.lib
+  CELL_LEFS:
+  - pdk_dir::libs.ref/sg13cmos5l_stdcell/lef/sg13cmos5l_stdcell.lef
+  - dir::../../../include/cmos5l/konrads_cells/lef/latch.lef
+  CELL_GDS:
+  - pdk_dir::libs.ref/sg13cmos5l_stdcell/gds/sg13cmos5l_stdcell.gds
+  - dir::../../../include/cmos5l/konrads_cells/gds/latch.gds
+  CELL_SPICE_MODELS:
+  - pdk_dir::libs.ref/sg13cmos5l_stdcell/spice/sg13cmos5l_stdcell.spice
+  CELL_CDLS:
+  - pdk_dir::libs.ref/sg13cmos5l_stdcell/cdl/sg13cmos5l_stdcell.cdl
+  CELL_VERILOG_MODELS:
+  - pdk_dir::libs.ref/sg13cmos5l_stdcell/verilog/sg13cmos5l_stdcell.v
+  - dir::../../../include/cmos5l/konrads_cells/verilog/latch.v
+  SYNTH_LATCH_MAP: dir::../../../include/cmos5l/techmap/latch_map.vh
+  SYNTH_DIRECT_WIRE_BUFFERING: true
+  CLOCK_PERIOD: 20
+  CLOCK_PORT: UserCLK
+  FP_SIZING: absolute
+  PL_TIMING_DRIVEN: false
+  PL_WIRE_LENGTH_COEF: 0.25
+  PL_MAX_DISPLACEMENT_X: 1000
+  PL_MAX_DISPLACEMENT_Y: 1000
+  PL_OPTIMIZE_MIRRORING: true
+  GRT_ADJUSTMENT: 0.3
+  GRT_LAYER_ADJUSTMENTS:
+  - 0
+  - 0
+  - 0
+  - 0
+  - 0
+  GRT_OVERFLOW_ITERS: 50
+  GRT_ALLOW_CONGESTION: true
+  RT_MIN_LAYER: Metal2
+  RT_MAX_LAYER: Metal4
+  GRT_ANTENNA_REPAIR_ITERS: 10
+  DRT_ANTENNA_REPAIR_ITERS: 10
+  DRT_ANTENNA_REPAIR_MARGIN: 10
+  DRT_OPT_ITERS: 64
+  DRT_SAVE_DRC_REPORT_ITERS: 1
+  DRT_SAVE_SNAPSHOTS: true
+  DESIGN_REPAIR_BUFFER_INPUT_PORTS: false
+  DESIGN_REPAIR_BUFFER_OUTPUT_PORTS: false
+  RUN_POST_GRT_DESIGN_REPAIR: false
+  RUN_POST_GRT_RESIZER_TIMING: false
+  PDN_MULTILAYER: false
+  PDN_EXTEND_TO: boundary
+  DIODE_CELL: sg13cmos5l_antennanp/A
+  EXTRA_EXCLUDED_CELLS:
+  - mux
+  - mux_inv
+  - SwitchMatrixMultiplexer
+  - SwitchMatrixMultiplexer_inv
+  - tri_buff
+  - tri_buff_cell
+  - sg13cmos5l_dlhq_*

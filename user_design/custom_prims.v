@@ -1,3 +1,7 @@
+// Dedicated clock source provided by the nextpnr FABulous backend.
+(* blackbox, keep *)
+module Global_Clock(output CLK);
+endmodule
 
 
 //Warning: The primitive AXI_M_BEL was added by FABulous automatically.
